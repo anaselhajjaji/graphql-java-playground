@@ -25,4 +25,8 @@ public record Book (String id, String name, int pageCount, String authorId) {
 				.findFirst()
 				.orElse(null);
     }
+
+    public static List<Book> all() {
+        return books;
+    }
 }
