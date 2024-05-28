@@ -1,5 +1,6 @@
 type Query {
-    books: [Book]
+    allBooks: [Book]
+    books (first: Int, after: String, last: Int, before: String): BookConnection
     bookById(id: ID): Book
 }
 
@@ -14,4 +15,21 @@ type Author {
     id: ID
     firstName: String
     lastName: String
+}
+
+type BookConnection {
+    edges: [BookEdge]
+    pageInfo: BookInfo!
+}
+
+type BookInfo {
+    startCursor: String
+    endCursor: String
+    hasNextPage: Boolean!
+    hasPreviousPage: Boolean!
+}
+
+type BookEdge {
+    cursor: String
+    node: Book!
 }

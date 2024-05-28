@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.model;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,5 +28,9 @@ public record Book (String id, String name, int pageCount, String authorId) {
 
     public static List<Book> all() {
         return books;
+    }
+
+    public static BookConnection getBookConnection(CursorInfo cursorInfo) {
+        return null;
     }
 }

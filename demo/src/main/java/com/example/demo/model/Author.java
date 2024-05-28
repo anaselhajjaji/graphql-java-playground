@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.model;
 
 import java.util.Arrays;
 import java.util.List;
